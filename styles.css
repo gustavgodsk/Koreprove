@@ -38,6 +38,7 @@ body {
 
 }
 
+.tooltip span {font-size: 1.3em;}
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
