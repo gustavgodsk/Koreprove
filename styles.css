@@ -1,0 +1,167 @@
+::-webkit-scrollbar{
+  display: none;
+}
+
+a {text-decoration: none;}
+a:hover {border-bottom: 1px solid rgb(66, 66, 224);}
+p {  color: rgb(48, 48, 48);}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  background-image: url("images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.containerDiv {
+  width: 60%;
+
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tooltip */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  max-width: 85%;
+  width: 85%;
+  background-color: #217aad;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 105%;
+  left: 50%;
+  margin-left: -50%;
+  word-wrap: break-word;
+
+  /* Fade in tooltip */
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #217aad transparent  ;
+}
+
+
+
+
+footer {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.titleDiv h1 {
+  margin: auto;
+  width: fit-content;
+  color: rgb(48, 48, 48);
+  padding: 10px 10px 0px 10px;
+  font-size: 2rem;
+}
+
+.categoriesDiv {
+  margin: 10px 40px;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+}
+
+.categoriesDiv img {
+  width: 70%;
+
+  border: 2px solid #217aad;
+  border-radius: 10px;
+  transition: transform .2s;
+  background: rgba(0, 0, 0, 0);
+  margin: 10px;
+
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+}
+
+.categoriesDiv img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.categoryInfoContainer {
+
+  margin: 10px 60px 10px 50px;
+  padding: 10px 30px;
+  border: 3px solid #217aad;
+  border-radius: 25px;
+}
+
+.categoryInfoContainer h2 {
+  font-size: 2em;
+  color: rgb(48, 48, 48);
+}
+
+.categoryInfoContainer p, li {
+  font-size: 1.2em;
+}
+
+.categoryInfoContainer li {
+  padding: 2px;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+  /* For mobile phones: */
+  .containerDiv {
+    width: 100%;
+  }
+
+  .categoriesDiv {
+    width: fit-content;
+  }
+
+  .categoriesDiv img {
+    width: 70%;
+  }
+
+  .tooltip .tooltiptext {
+    left: 50%;
+  }
+}

@@ -2,11 +2,75 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
   <title>Køreprøve Test</title>
-
+  <link rel="icon" href="images/icon.png">
 </head>
 
 <body>
+
+<div class="containerDiv">
+  <header>
+  <div class="titleDiv">
+    <h1>Køreprøve Test</h1>
+  </div>
+  </header>
+
+  <article>
+  <div class="categoriesDiv" id="categoriesDiv">
+    <div class="tooltip">
+      <img src="images/ansvar.png" onclick="changeCategory('ansvar')" id="ansvar">
+      <span class="tooltiptext" id="ansvar-Tip">Ansvar</span>
+    </div>
+    <div class="tooltip">
+      <img src="images/styreapparat.png" onclick="changeCategory('styreapparat')" id="styreapparat">
+      <span class="tooltiptext" id="styreapparat-Tip">Styreapparat</span>
+    </div>
+    <div class="tooltip">
+      <img src="images/bremser.png" onclick="changeCategory('bremser')" id="bremser">
+      <span class="tooltiptext" id="bremser-Tip">Bremser</span>
+    </div>
+    <div class="tooltip">
+      <img src="images/lygter-og-reflekser.png" onclick="changeCategory('lygter-og-reflekser')" id="lygter-og-reflekser">
+      <span class="tooltiptext" id="lygter-og-reflekser-Tip">Lygter og reflekser</span>
+    </div>
+    <div class="tooltip">
+      <img src="images/ruder-og-spejle.png" onclick="changeCategory('ruder-og-spejle')" id="ruder-og-spejle">
+      <span class="tooltiptext" id="ruder-og-spejle-Tip">Ruder og spejle</span>
+    </div>
+    <div class="tooltip">
+      <img src="images/motor-og-udstødning.png" onclick="changeCategory('motor-og-udstødning')" id="motor-og-udstødning">
+      <span class="tooltiptext" id="motor-og-udstødning-Tip">Motor og udstødning</span>
+    </div>
+    <div class="tooltip">
+      <img src="images/nyttige-oplysninger.png" onclick="changeCategory('nyttige-oplysninger')" id="nyttige-oplysninger">
+      <span class="tooltiptext" id="nyttige-oplysninger-Tip">Nyttige oplysninger</span>
+    </div>
+  </div>
+
+  <div class="categoryInfoContainer" id="categoryInfoContainer">
+    <h2 id="categoryTitle">Bliv klar til køreprøven</h2>
+    <p></p>
+    <p>Vælg en kategori eller tag testen i alle kategorier</p>
+    <p>Spørgsmål og svar er lavet med inspiration fra</p>
+    <ul>
+      <li><a href="https://www.xn--bttern-bya.dk/Content.aspx?view=12&id=113" target="_blank">Bøttern Køreskole</a></li>
+      <li><a href="https://www.egekjaers.dk/bilens-teknik-spoergsmaal-til-koereproeven/" target="_blank">Egekjærs Trafikskole</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="shuffleDiv">
+      <button onclick="shuffle(currentCategory);">Tag testen!</button>
+    </div>
+    
+  </div>
+
+
+  </article>  
+
+  <footer>Lavet af Gustav Godsk til fri afbenyttelse &bull; Skriv til mig på <a href="mailto:gustavgodsk@gmail.com?subject=Køreprøve hjemmeside">gustavgodsk@gmail.com</a> hvis du har nogle rettelser &bull; <a href="https://github.com/gustavgodsk/Koreprove" target="_blank">Kildekode</a> &bull; Ikoner af <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> fra <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+  </footer>
+</div>
 
   <script src="script.js"></script>
 </body>
