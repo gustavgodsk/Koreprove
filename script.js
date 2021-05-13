@@ -1,3 +1,32 @@
+const testArr = [
+
+  //Kategori
+  {
+    Category: "Ansvar",
+    Description: "XDLMAO!!",
+    Questions: [
+      //Spørgsmål 1
+      {
+        Type: "Multiple choice",
+        Problem: ["Hvem har ansvaret for at bilen er i lovlig stand?"],
+        Choices: ["Føreren af bilen", "Bilens ejer", "Alle, der kører i bilen"],
+        Answer: ["Bilens ejer"],
+        Explanation: "Ejeren af bilen har ansvaret for, at bilen er i lovlig stand - dvs. forsikring osv.",
+        Subcategory: "Ansvar for køretøjet"
+      }
+
+      //Spørgsmål 2
+    ]
+  },
+
+
+]
+
+
+
+
+
+
 const categoryInfoContainer = document.getElementById("categoryInfoContainer");
 const categoriesDiv = document.getElementById("categoriesDiv");
 
