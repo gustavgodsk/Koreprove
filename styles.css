@@ -2,8 +2,15 @@
   display: none;
 }
 
-a {text-decoration: none;}
-a:hover {border-bottom: 1px solid rgb(66, 66, 224);}
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 170);
+}
+a:hover {text-decoration: underline;}
 p {  color: rgb(48, 48, 48);}
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 body {
@@ -42,9 +49,9 @@ body {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  max-width: 85%;
-  width: 85%;
-  background-color: #217aad;
+  min-width: 100%;
+  background-color: #15577e;
+  opacity: 90%;
   color: #fff;
   text-align: center;
   padding: 5px;
@@ -53,7 +60,7 @@ body {
   /* Position the tooltip text */
   position: absolute;
   z-index: 1;
-  top: 105%;
+  top: 101%;
   left: 50%;
   margin-left: -50%;
   word-wrap: break-word;
@@ -80,14 +87,19 @@ footer {
   margin-top: auto;
   padding: 10px;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.6em;
+    background-color: #69b7e4;
+}
+
+.titleDiv {
+  background-color: #69b7e4;
 }
 
 .titleDiv h1 {
   margin: auto;
   width: fit-content;
   color: rgb(48, 48, 48);
-  padding: 10px 10px 0px 10px;
+  padding: 10px 10px 10px 10px;
   font-size: 2rem;
 }
 
@@ -99,7 +111,7 @@ footer {
 }
 
 .categoriesDiv img {
-  width: 70%;
+  width: 80%;
 
   border: 2px solid #217aad;
   border-radius: 10px;
@@ -122,23 +134,35 @@ footer {
 }
 
 .categoryInfoContainer {
-
+  display: grid;
+  grid-template-rows: auto 0px;
+  min-height: 22rem;
+  max-height: 22rem;
   margin: 10px 60px 10px 50px;
   padding: 10px 30px;
   border: 3px solid #217aad;
   border-radius: 25px;
 }
 
-.categoryInfoContainer h2 {
+.refDiv h2 {
   font-size: 2em;
   color: rgb(48, 48, 48);
+  margin: 5px auto;
 }
 
-.categoryInfoContainer p, li {
+.refDiv p{
   font-size: 1.2em;
+  margin: 0;
+  margin-top: 15px;
 }
 
-.categoryInfoContainer li {
+.refDiv ul {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.refDiv li {
+  font-size: 1.2em;
   padding: 2px;
 }
 
@@ -160,6 +184,8 @@ footer {
 *::before, *::after {
   box-sizing: border-box;
 }
+
+
 .shuffleDiv {
   font-family: 'OpenSans', sans-serif;
   font-size: 1rem;
@@ -169,7 +195,6 @@ footer {
           justify-content: center;
   margin: 0;
   margin-bottom: 20px;
-
 }
 .shuffleDiv button {
   position: relative;
@@ -181,8 +206,8 @@ footer {
   text-decoration: none;
   font-size: 1.3rem;
     color:var(--colorText);
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 530;
+
   font-family: inherit;
 }
 
@@ -206,7 +231,7 @@ button.big-button::before {
   bottom: 0;
   background: var(--colorShadeC);
   border-radius: inherit;
-    box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.5em 0 0 var(--colorShadeA);
+    box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.3em 0 0 var(--colorShadeA);
  transform: translate3d(0, 0.5em, -1em);
      transition: all 100ms cubic-bezier(0, 0, 1, 1);
 }
@@ -222,13 +247,13 @@ button.big-button:hover::before {
 }
 
 button.big-button:active {
-            transform: translate(0em, 0.75em);
+            transform: translate(0em, 0.2em);
 }
 
 button.big-button:active::before {
-  transform: translate3d(0, 0, -1em);
+  transform: translate3d(0, 5px, -2em);
   
-      box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+      box-shadow: 0 0 0 2px var(--colorShadeB), 0 0 0.3em 0 var(--colorShadeB);
 
 }
 
@@ -238,7 +263,37 @@ button.big-button:active::before {
 
 }
 
+.refDiv {
+  display: inline;
+}
 
+.qstDiv {
+  display: none;
+}
+
+.qstDiv h2 {
+
+}
+
+.qstDiv #qstProblem {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.qstDiv .qstSpan {
+  color:#217aad;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.73rem;
+}
+
+
+
+#qstExplanation {
+  font-weight: bold;
+  margin: 0;
+}
 
 
 

@@ -1,6 +1,6 @@
 const testArr = [
 
-  //Kategori
+  //Ansvar
   {
     Category: "Ansvar",
     Description: "XDLMAO!!",
@@ -16,10 +16,114 @@ const testArr = [
       }
 
       //Spørgsmål 2
+      // {
+      //  Type:
+      //  ...osv
+      //}
     ]
   },
 
+    //Styreapparat
+    {
+      Category: "Styreapparat",
+      Description: "",
+      Questions: [
+        //Spørgsmål 1
+        {
+          Type: "Multiple choice",
+          Problem: [""],
+          Choices: ["", "", ""],
+          Answer: [""],
+          Explanation: "",
+          Subcategory: ""
+        }
+      ]
+    },
 
+    //Bremser
+    {
+      Category: "Bremser",
+      Description: "",
+      Questions: [
+        //Spørgsmål 1
+        {
+          Type: "Multiple choice",
+          Problem: [""],
+          Choices: ["", "", ""],
+          Answer: [""],
+          Explanation: "",
+          Subcategory: ""
+        }
+      ]
+    },
+
+    //Lygter og reflekser
+    {
+      Category: "Lygter og reflekser",
+      Description: "",
+      Questions: [
+        //Spørgsmål 1
+        {
+          Type: "Multiple choice",
+          Problem: [""],
+          Choices: ["", "", ""],
+          Answer: [""],
+          Explanation: "",
+          Subcategory: ""
+        }
+      ]
+    },
+    
+    //Ruder og spejle
+    {
+      Category: "Ruder og spejle",
+      Description: "",
+      Questions: [
+        //Spørgsmål 1
+        {
+          Type: "Multiple choice",
+          Problem: [""],
+          Choices: ["", "", ""],
+          Answer: [""],
+          Explanation: "",
+          Subcategory: ""
+        }
+      ]
+    },
+
+    //Motor og udstødning
+    {
+      Category: "Motor og udstødning",
+      Description: "",
+      Questions: [
+        //Spørgsmål 1
+        {
+          Type: "Multiple choice",
+          Problem: [""],
+          Choices: ["", "", ""],
+          Answer: [""],
+          Explanation: "",
+          Subcategory: ""
+        }
+      ]
+    },
+
+    //Nyttige oplysninger
+    {
+      Category: "Nyttige oplysninger",
+      Description: "",
+      Questions: [
+        //Spørgsmål 1
+        {
+          Type: "Multiple choice",
+          Problem: [""],
+          Choices: ["", "", ""],
+          Answer: [""],
+          Explanation: "",
+          Subcategory: ""
+        }
+      ]
+    }
 ]
 
 
@@ -29,8 +133,24 @@ const testArr = [
 
 const categoryInfoContainer = document.getElementById("categoryInfoContainer");
 const categoriesDiv = document.getElementById("categoriesDiv");
+const categoryTitle = document.getElementById("categoryTitle");
+const subcatSpan = document.getElementById("subcatSpan");
+const refDiv = document.getElementById("refDiv");
+const qstDiv = document.getElementById("qstDiv");
+const qstCategory = document.getElementById("qstCategory");
+const qstProblem = document.getElementById("qstProblem");
 
 let currentCategory = "all";
+
+const categoryArray = [
+  "ansvar",
+  "styreapparat",
+  "bremser",
+  "lygter-og-reflekser",
+  "ruder-og-spejle",
+  "motor-og-udstødning",
+  "nyttige-oplysninger"
+]
 
 const categoryImgArray = [
   document.getElementById("ansvar"),
@@ -68,9 +188,10 @@ function shuffle(category){
 }
 
 function changeCategory(category){
-  categoryInfoContainer.style.width = categoriesDiv.style.width;
   //Hvis man vælger den samme kategori igen
   if (category == currentCategory){
+    refDiv.style.display = "inline";
+    qstDiv.style.display = "none";
     //Alle kategorier
     categoryImgArray.forEach(el => {
       el.style.filter = "brightness(100%)"; 
@@ -81,6 +202,10 @@ function changeCategory(category){
   }
   //Hvis man vælger en ny kategori
   else {
+    qstCategory.innerText = testArr[categoryArray.indexOf(category)].Category;
+    refDiv.style.display = "none";
+    qstDiv.style.display = "inline";
+
     currentCategory = category;
     categoryImgArray.forEach(el => {
       //Alle andre kategorier
