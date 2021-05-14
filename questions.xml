@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+
+<categories>
+
+  <category id="ansvar">
+    <categoryTitle>Ansvar</categoryTitle>
+    <categorySubtitle>
+      <ctitle>Ansvar for køretøjet</ctitle>
+    </categorySubtitle>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+  </category>
+
+  <category id="styreapparat">
+    <categoryTitle>Styreapparat</categoryTitle>
+    <categorySubtitle>
+      <ctitle>Styreapparatet</ctitle>
+      <ctitle>Horn</ctitle>
+    </categorySubtitle>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+  </category>
+
+  <category id="bremser">
+    <categoryTitle>Bremser</categoryTitle>
+    <categorySubtitle>
+      <ctitle>Driftsbremsen (fodbremsen)</ctitle>
+      <ctitle>Nødbremsen</ctitle>
+      <ctitle>Parkeringsbremsen (håndbremsen)</ctitle>
+      <ctitle>Bremseforstærker</ctitle>
+      <ctitle>Fejl i bremser</ctitle>
+    </categorySubtitle>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+  </category>
+
+  <category id="lygter-og-reflekser">
+    <categoryTitle>Lygter og reflekser</categoryTitle>
+    <categorySubtitle>
+      <ctitle>Lygter og reflekser</ctitle>
+    </categorySubtitle>
+
+
+    <categorySubInfo>
+      <subinfo>Du har ansvaret for at lygter og reflekser er rene, og at lygterne virker.</subinfo>
+      <subinfo>Et lygtepar skal lyse med samme farve og styrke.</subinfo>
+      <subinfo>
+        <subarr>2 nærlyslygter</subarr>
+        <subarr>Hvid/gullig</subarr>
+        <subarr>Oplyse 30 m</subarr>
+        <subarr>Ikke blænde, skal falde 1% (1 cm på 1)</subarr>
+        <subarr>Asymmetrisk (lyse mest til højre side)</subarr>
+      </subinfo>
+
+      <subinfo>
+        <subarr>2 fjernlyslygter</subarr>
+        <subarr>Hvid/gullig</subarr>
+        <subarr>Oplyse 100 m</subarr>
+      </subinfo>
+
+      <subinfo>
+        <subarr>2 positionslygter (parkeringslys)</subarr>
+        <subarr>Hvid/gullig</subarr>
+        <subarr>Skal kunne ses 300 m væk</subarr>
+      </subinfo>
+
+      <subinfo>
+        <subarr>Bagpå skal der være:</subarr>
+        <subarr>2 røde baglygter, skal kunne ses 300 m væk</subarr>
+        <subarr>3 røde stoplygter, skal lyse væsentligt kraftigere end baglygterne</subarr>
+        <subarr>Hvidt nummerpladelys, man skal kunne læse nummerpladen fra 20 m</subarr>
+        <subarr>2 røde reflekser, må ikke være trekantede (anhængere har trekantede reflekser</subarr>
+        </subinfo>
+
+      <subinfo>
+        <subarr>Blinklys</subarr>
+        <subarr>2 foran, 2 på siden, 2 bagpå</subarr>
+        <subarr>Gul/orange, kan tydeligt ses i solskin</subarr>
+        <subarr>Blinke 1-2 gange i sekundet (60-120 gange i minuttet</subarr>
+        <subarr>Havariblink-knappen aktiverer alle blinklys på én gang</subarr>
+      </subinfo>
+      <subinfo>Skolevognen har også tågelys og baklys. De er ikke obligatoriske, men hvis de er der, skal de virke.</subinfo>
+    </categorySubInfo>
+  </category>
+
+  <category id="ruder-og-spejle">
+    <categoryTitle>Ruder og spejle</categoryTitle>
+    <categorySubtitle>
+      <ctitle></ctitle>
+    </categorySubtitle>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+  </category>
+
+  <category id="motor-og-udstødning">
+    <categoryTitle>Motor og udstødning</categoryTitle>
+    <categorySubtitle>
+      <ctitle></ctitle>
+    </categorySubtitle>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+  </category>
+
+  <category id="nyttige-oplysninger">
+    <categoryTitle>Nyttige oplysninger</categoryTitle>
+    <categorySubtitle>
+      <ctitle></ctitle>
+    </categorySubtitle>
+
+    <categorySubInfo>
+      <subinfo></subinfo>
+      <subinfo>
+        <subarr></subarr>
+      </subinfo>
+    </categorySubInfo>
+  </category>
+
+</categories>

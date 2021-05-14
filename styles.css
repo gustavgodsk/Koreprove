@@ -104,6 +104,12 @@ footer {
   color: rgb(48, 48, 48);
   padding: 10px 10px 10px 10px;
   font-size: 2rem;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 1000;
+}
+
+.titleDiv a {
+  color: rgb(48, 48, 48);
 }
 
 .categoriesDiv {
@@ -114,7 +120,7 @@ footer {
 }
 
 .categoriesDiv img {
-  width: 80%;
+  width: 77%;
 
   border: 2px solid #217aad;
   border-radius: 10px;
@@ -141,7 +147,7 @@ footer {
   grid-template-rows: auto 0px;
   min-height: 22rem;
 
-  margin: 10px 60px 10px 50px;
+  margin: 10px 60px 50px 50px;
   padding: 10px 30px;
   border: 3px solid #217aad;
   border-radius: 25px;
@@ -181,10 +187,10 @@ footer {
 }
 
 
-* {
+.shuffleDiv * {
   box-sizing: border-box;
 }
-*::before, *::after {
+.shuffleDiv *::before, .shuffleDiv *::after {
   box-sizing: border-box;
 }
 
@@ -197,7 +203,6 @@ footer {
           align-items: center;
           justify-content: center;
   margin: 0;
-  margin-bottom: 20px;
 }
 .shuffleDiv button {
   position: relative;
@@ -210,7 +215,6 @@ footer {
   font-size: 1.3rem;
     color:var(--colorText);
   font-weight: 530;
-
   font-family: inherit;
 }
 
@@ -323,17 +327,73 @@ button.big-button:active::before {
   font-size: 1.05em;
 }
 
-.marginBottom .subcatSpan{
-
-}
-
 .marginBottom li {
   line-height: 1.5;
+}
+
+.catDiv .subcatSpan {
+  cursor: pointer;
+}
+
+.catDiv .subcatSpan:hover {
+  color: rgb(101, 174, 226);
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.tempDiv {
+  opacity:1;
+  transition: all 1s;
 }
 
 .mrgnTop {
   margin-top: 20px;
 }
+
+.marginBottom ul {
+  padding-left: 40px;
+  list-style:disc;
+}
+
+
+#xmlButton {
+  width: 20%;
+  height: 20%;
+}
+
+
+
+
+
+
+
+.showMore {
+
+
+  cursor: pointer;
+}
+.showMore + input {
+ display:none;
+}
+.showMore + input + * {
+ 
+  max-height: 0;
+  /*and eventually delay an overflow:auto; */
+  overflow:hidden;
+  transition: max-height 0.5s, overflow 1s;
+}
+.showMore + input:checked + * { 
+  /* here comes the compromise, set a max-height that would for your usual contents*/
+   max-height:2000px;
+  overflow:auto;
+  transition: max-height 2s, overflow 20s;
+}
+
+
+
+
+
 
 
 @media only screen and (max-width: 1000px) {
