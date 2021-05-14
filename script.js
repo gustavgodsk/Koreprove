@@ -1,130 +1,4 @@
-const testArr = [
 
-  //Ansvar
-  {
-    Category: "Ansvar",
-    Description: "XDLMAO!!",
-    Questions: [
-      //Spørgsmål 1
-      {
-        Type: "Multiple choice",
-        Problem: ["Hvem har ansvaret for at bilen er i lovlig stand?"],
-        Choices: ["Føreren af bilen", "Bilens ejer", "Alle, der kører i bilen"],
-        Answer: ["Bilens ejer"],
-        Explanation: "Ejeren af bilen har ansvaret for, at bilen er i lovlig stand - dvs. forsikring osv.",
-        Subcategory: "Ansvar for køretøjet"
-      }
-
-      //Spørgsmål 2
-      // {
-      //  Type:
-      //  ...osv
-      //}
-    ]
-  },
-
-    //Styreapparat
-    {
-      Category: "Styreapparat",
-      Description: "",
-      Questions: [
-        //Spørgsmål 1
-        {
-          Type: "Multiple choice",
-          Problem: [""],
-          Choices: ["", "", ""],
-          Answer: [""],
-          Explanation: "",
-          Subcategory: ""
-        }
-      ]
-    },
-
-    //Bremser
-    {
-      Category: "Bremser",
-      Description: "",
-      Questions: [
-        //Spørgsmål 1
-        {
-          Type: "Multiple choice",
-          Problem: [""],
-          Choices: ["", "", ""],
-          Answer: [""],
-          Explanation: "",
-          Subcategory: ""
-        }
-      ]
-    },
-
-    //Lygter og reflekser
-    {
-      Category: "Lygter og reflekser",
-      Description: "",
-      Questions: [
-        //Spørgsmål 1
-        {
-          Type: "Multiple choice",
-          Problem: [""],
-          Choices: ["", "", ""],
-          Answer: [""],
-          Explanation: "",
-          Subcategory: ""
-        }
-      ]
-    },
-    
-    //Ruder og spejle
-    {
-      Category: "Ruder og spejle",
-      Description: "",
-      Questions: [
-        //Spørgsmål 1
-        {
-          Type: "Multiple choice",
-          Problem: [""],
-          Choices: ["", "", ""],
-          Answer: [""],
-          Explanation: "",
-          Subcategory: ""
-        }
-      ]
-    },
-
-    //Motor og udstødning
-    {
-      Category: "Motor og udstødning",
-      Description: "",
-      Questions: [
-        //Spørgsmål 1
-        {
-          Type: "Multiple choice",
-          Problem: [""],
-          Choices: ["", "", ""],
-          Answer: [""],
-          Explanation: "",
-          Subcategory: ""
-        }
-      ]
-    },
-
-    //Nyttige oplysninger
-    {
-      Category: "Nyttige oplysninger",
-      Description: "",
-      Questions: [
-        //Spørgsmål 1
-        {
-          Type: "Multiple choice",
-          Problem: [""],
-          Choices: ["", "", ""],
-          Answer: [""],
-          Explanation: "",
-          Subcategory: ""
-        }
-      ]
-    }
-]
 
 
 
@@ -137,8 +11,10 @@ const categoryTitle = document.getElementById("categoryTitle");
 const subcatSpan = document.getElementById("subcatSpan");
 const refDiv = document.getElementById("refDiv");
 const qstDiv = document.getElementById("qstDiv");
+const catDiv = document.getElementById("catDiv");
 const qstCategory = document.getElementById("qstCategory");
 const qstProblem = document.getElementById("qstProblem");
+
 
 let currentCategory = "all";
 
@@ -183,15 +59,95 @@ categoryImgArray.forEach(el => {
   })
 })
 
+//Når man trykker på knappen
 function shuffle(category){
   console.log(category);
+  if (document.getElementById("catInfoDiv")){catDiv.removeChild(catInfoDiv);}
+  qstDiv.style.display = "inline";
+  refDiv.style.display = "none";
+  catDiv.style.display = "none";
 }
 
+
+//Når man skifter kategori og informationerne skal ændres
+function updateCategoryInfo(category){
+
+
+  //Create outer div and append to catDiv
+  const catInfoDiv = document.createElement("div");
+  catInfoDiv.id = "catInfoDiv";
+  catInfoDiv.className = "marginBottom"
+  catDiv.appendChild(catInfoDiv);
+
+  const categoryi = category.split("-").join("");
+  const catTitle = catObj[categoryi].catTitle;
+  const catSubTitle = catObj[categoryi].catSubTitle;
+  const catSubInfo = catObj[categoryi].catSubInfo;
+
+  const title = document.createElement("h2")
+  title.textContent = catTitle;
+  if (catSubTitle.length < 2){title.style.marginBottom = "20px"}
+  catInfoDiv.appendChild(title)
+
+  catSubTitle.forEach((el, indx) => {
+
+    if (catSubTitle.length > 1){
+    const subTitle = document.createElement("span");
+    subTitle.className = "subcatSpan";
+    subTitle.textContent = el;
+    const mrgnTop = document.createElement ("div");
+    mrgnTop.className = "mrgnTop";
+    mrgnTop.appendChild(subTitle);
+    catInfoDiv.appendChild(mrgnTop)
+    }
+    catSubInfo[indx].forEach(elem => {
+      if (Array.isArray(elem)){
+        const ul = document.createElement("ul");
+        ul.className = "catUl";
+        elem.forEach((element, index) => {
+          if (index == 0){
+            const pb = document.createElement("p");
+            pb.className = "boldtext";
+            const b = document.createElement("b");
+            b.textContent = element;
+            pb.appendChild(b);
+            catInfoDiv.appendChild(pb);
+          }
+          else {
+            const li = document.createElement("li");
+            li.textContent = element;
+            ul.appendChild(li);
+          }
+        })
+        catInfoDiv.appendChild(ul);
+      }
+      else {
+        const p = document.createElement("p");
+        p.textContent = elem;
+        catInfoDiv.appendChild(p);
+      }
+    })
+  })
+
+
+
+
+
+}
+
+
+
+
+//Når man skifter kategori
 function changeCategory(category){
+  qstDiv.style.display = "none";
+  if (document.getElementById("catInfoDiv")){catDiv.removeChild(catInfoDiv);}
+  
+
   //Hvis man vælger den samme kategori igen
   if (category == currentCategory){
     refDiv.style.display = "inline";
-    qstDiv.style.display = "none";
+    catDiv.style.display = "none";
     //Alle kategorier
     categoryImgArray.forEach(el => {
       el.style.filter = "brightness(100%)"; 
@@ -204,7 +160,9 @@ function changeCategory(category){
   else {
     qstCategory.innerText = testArr[categoryArray.indexOf(category)].Category;
     refDiv.style.display = "none";
-    qstDiv.style.display = "inline";
+
+    updateCategoryInfo(category);
+    catDiv.style.display = "inline";
 
     currentCategory = category;
     categoryImgArray.forEach(el => {

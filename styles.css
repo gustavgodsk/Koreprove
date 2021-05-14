@@ -16,14 +16,17 @@ p {  color: rgb(48, 48, 48);}
 body {
   width: 100vw;
   height: 100vh;
+  min-height: 100vh;
   margin: 0px;
   background-image: url("images/background.jpg");
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
 }
+
 
 .containerDiv {
   width: 60%;
@@ -60,7 +63,7 @@ body {
   /* Position the tooltip text */
   position: absolute;
   z-index: 1;
-  top: 101%;
+  top: 105%;
   left: 50%;
   margin-left: -50%;
   word-wrap: break-word;
@@ -137,7 +140,7 @@ footer {
   display: grid;
   grid-template-rows: auto 0px;
   min-height: 22rem;
-  max-height: 22rem;
+
   margin: 10px 60px 10px 50px;
   padding: 10px 30px;
   border: 3px solid #217aad;
@@ -272,7 +275,7 @@ button.big-button:active::before {
 }
 
 .qstDiv h2 {
-
+  margin: 5px 0px;
 }
 
 .qstDiv #qstProblem {
@@ -280,7 +283,7 @@ button.big-button:active::before {
   font-size: 1rem;
 }
 
-.qstDiv .qstSpan {
+.subcatSpan {
   color:#217aad;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
@@ -288,15 +291,49 @@ button.big-button:active::before {
   font-size: 0.73rem;
 }
 
-
-
 #qstExplanation {
   font-weight: bold;
   margin: 0;
 }
 
+.catDiv {
+  display: none;
+}
 
+.catUl {
+  margin: 2px;
+}
 
+.marginBottom {
+  margin-bottom: 50px;
+}
+
+.marginBottom h2 {
+  margin: 5px 0px;
+}
+
+.marginBottom p {
+  margin: 5px 0px;
+  font-size: 1.05em;
+}
+
+.marginBottom .boldtext {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 1.05em;
+}
+
+.marginBottom .subcatSpan{
+
+}
+
+.marginBottom li {
+  line-height: 1.5;
+}
+
+.mrgnTop {
+  margin-top: 20px;
+}
 
 
 @media only screen and (max-width: 1000px) {
